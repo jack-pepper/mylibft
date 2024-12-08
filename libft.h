@@ -103,7 +103,7 @@ void		conv_hex(const char *fmt, va_list args, char *flg, size_t *b_writ);
 void		conv_txt(const char *fmt, va_list args, size_t *b_writ);
 // Conversion to hexadecimal
 char		*ft_itohex(char *dest, unsigned long nb, char style);
-void		hex_set_case(char style, ivent *case_var);
+void		hex_set_case(char style, int *case_var);
 char		*hex_handle_zero(char *hex_value, char style);
 char		*hex_format_string(int i, char *hex_value, char style);
 // For outputing and counting written bytes
