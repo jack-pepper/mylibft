@@ -120,4 +120,41 @@ char		*seize_line(char **stash, char *cursor);
 char		*seize_eof(char **next_line, char **stash);
 void		clean_stash(char **stash);
 
+/* LIBBIN - For bit manipulation */
+void		ft_show_bin(int num, unsigned int nb_of_bytes);
+	// Basic bit operations
+unsigned int	ft_set_bit(unsigned int num, int bit_pos);
+unsigned int	ft_clear_bit(unsigned int num, int bit_pos);
+unsigned int	ft_toggle_bit(unsigned int num, int bit_pos);
+int		ft_is_bit_set(unsigned int num, int bit_pos);
+	// Counting bits
+int		ft_count_set_bits(unsigned int num);
+int		ft_count_clear_bits(unsigned int num);
+int		ft_first_set_bit_pos(unsigned int num);
+int		ft_highest_set_bit_pos(unsigned int num);
+	// Masking bits
+unsigned int	ft_extract_bits(unsigned int num, int start_bit, int end_bit);
+unsigned int	ft_set_bits(unsigned int num, int start_bit, int end_bit, unsigned int value);
+int		ft_match_bits(unsigned int num, int start_bit, int end_bit, unsigned int value);
+	// Shifting and rotating
+unsigned int	ft_rotate_left(unsigned int num, int shift_amount);
+unsigned int	ft_rotate_right(unsigned int num, int shift_amount);
+unsigned int	ft_arithmetic_shift_left(unsigned int num, int shift_amount);
+	// Testing and comparison
+int		ft_is_power_of_two(unsigned int num);
+int		ft_are_bits_equal(unsigned int num1, unsigned int num2);
+	// Utilities
+unsigned int	ft_reverse_bits(unsigned int num);
+unsigned int	ft_swap_bits(unsigned int num, int bit1_position, int bit2_position);
+int		ft_count_leading_zeros(unsigned int num);
+int		ft_count_trailing_zeros(unsigned int num);
+int		ft_get_parity(unsigned int num);
+	// Specialized operations
+unsigned int	ft_pack_two_int(unsigned int int1, unsigned int int2);
+unsigned int	ft_unpack_first_half(unsigned int packed);
+unsigned int	ft_unpack_second_half(unsigned int packed);
+	// Custom bit patterns
+unsigned int	ft_create_bitmask(int num_bits);
+unsigned int	ft_create_range_bitmask(int start_bit, int end_bit);
+
 #endif

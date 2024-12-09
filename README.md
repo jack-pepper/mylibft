@@ -126,6 +126,39 @@ To use this project locally:
 - seize_eof: Handles EOF and returns data in stash if necessary.
 - clean_stash: Frees the stash and sets the pointer to null.
 
+### LIBBIN - For bits operations
+- ft_show_bin: Displays the int num in binary notation.
+        // Basic bit operations
+- ft_set_bit: Sets the specific bit of num at bit_pos to 1.
+- ft_clear_bit: Clears the specific bit of num at bit_pos (sets it to 0).
+- ft_toggle_bit: Toggles the specific bit of num at bit_pos (flips between 1 and 0).
+- ft_is_bit_set: Checks if the specific bit of num at bit_pos is set (1) or not (0).
+        // Counting bits
+- ft_count_set_bits: Counts the number of bits set to 1.
+- ft_count_clear_bits: Counts the number of bits set to 0.
+- ft_first_set_bit_pos: Gets the position of the first bit set to 1.
+- ft_highest_set_bit_pos:
+        // Masking bits
+- ft_extract_bits:
+- ft_set_bits:
+- ft_match_bits:
+        // Shifting and rotating
+- ft_rotate_left:
+- ft_rotate_right:
+- ft_arithmetic_shift_left:
+        // Testing and comparison
+- ft_is_power_of_two:
+- ft_are_bits_equal:
+        // Utilities
+- ft_reverse_bits:
+- ft_swap_bits:
+- ft_count_leading_zeros:
+- ft_count_trailing_zeros:
+- ft_get_parity:
+        // Specialized operations
+- ft_pack_two_int:
+- ft_unpack_first_half:
+
 ### Extra functions
 As my cursus progresses and new challenges arise, I plan to expand this library by adding additional functions to meet specific project needs. These updates will enhance the functionality and versatility of the library.
 
