@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
-/*   Updated: 2024/11/14 09:34:23 by mmalie           ###   ########.fr       */
+/*   Updated: 2024/12/10 14:18:47 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,7 @@ void		clean_stash(char **stash);
 
 /* LIBBIN - For bit manipulation */
 void		ft_show_bin(int num, unsigned int nb_of_bytes);
+void		ft_get_bin(int num, char binary[33]);
 	// Basic bit operations
 unsigned int	ft_set_bit(unsigned int num, int bit_pos);
 unsigned int	ft_clear_bit(unsigned int num, int bit_pos);

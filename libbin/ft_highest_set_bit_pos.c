@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_set_bits.c                                :+:      :+:    :+:   */
+/*   ft_highest_set_bit_pos.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 08:43:01 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/10 09:06:40 by mmalie           ###   ########.fr       */
+/*   Created: 2024/12/10 09:11:18 by mmalie            #+#    #+#             */
+/*   Updated: 2024/12/10 09:45:00 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 /*
- * Counts the number of bits set to 1.
+ * Gets the position of the most significant bit.
  */
-int	ft_count_set_bits(unsigned int num)
-{
-	int	count;
-	int	bit_pos;
-	int	size;
 
-	count = 0;
+int	highest_set_bit_pos(unsigned int num)
+{
+	int	bit_pos;
+
 	bit_pos = 0;
-	size = (sizeof(num) * 8);
-	while (bit_pos < size)
+	if (num == 0)
+		return (-1);
+	while (num > 0)
 	{
-		if (num & (1 << bit_pos))
-			count++;
+		num >>= 1;
 		bit_pos++;
 	}
-	return (count);
+	return (bit_pos - 1);
 }

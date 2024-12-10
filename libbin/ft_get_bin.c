@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_set_bits.c                                :+:      :+:    :+:   */
+/*   ft_get_bin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 08:43:01 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/10 09:06:40 by mmalie           ###   ########.fr       */
+/*   Updated: 2024/12/10 14:25:18 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 /*
- * Counts the number of bits set to 1.
+ * Stores the int num in binary notation in the array binary.
  */
-int	ft_count_set_bits(unsigned int num)
+void	ft_get_bin(int num, char binary[33])
 {
-	int	count;
-	int	bit_pos;
-	int	size;
+	int	i;
 
-	count = 0;
-	bit_pos = 0;
-	size = (sizeof(num) * 8);
-	while (bit_pos < size)
+	i = 31;
+	while (i > 0)
 	{
-		if (num & (1 << bit_pos))
-			count++;
-		bit_pos++;
+		if (num & (1 << i))
+			binary[31 - i] = '1';
+		else
+			binary[31 - i] = '0';
+		i--;
 	}
-	return (count);
+	binary[32] = '\0';
 }

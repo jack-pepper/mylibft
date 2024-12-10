@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 08:43:01 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/09 08:44:22 by mmalie           ###   ########.fr       */
+/*   Updated: 2024/12/10 13:59:14 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int	ft_is_bit_set(unsigned int num, int bit_pos)
 		return (-1);
 	if(num & (1 << bit_pos))
 		is_set = 1;
-	return (is_set);
+return (is_set);
 }

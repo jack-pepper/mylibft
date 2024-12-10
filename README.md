@@ -129,6 +129,7 @@ To use this project locally:
 ### LIBBIN - For bits operations
 - ft_show_bin: Displays the int num in binary notation.
         // Basic bit operations
+- ft_get_bin: Gets the int num in binary notation and stores it in an array send in parameter.
 - ft_set_bit: Sets the specific bit of num at bit_pos to 1.
 - ft_clear_bit: Clears the specific bit of num at bit_pos (sets it to 0).
 - ft_toggle_bit: Toggles the specific bit of num at bit_pos (flips between 1 and 0).
@@ -137,27 +138,29 @@ To use this project locally:
 - ft_count_set_bits: Counts the number of bits set to 1.
 - ft_count_clear_bits: Counts the number of bits set to 0.
 - ft_first_set_bit_pos: Gets the position of the first bit set to 1.
-- ft_highest_set_bit_pos:
+- ft_highest_set_bit_pos: Gets the position of the most significant bit.
         // Masking bits
-- ft_extract_bits:
-- ft_set_bits:
-- ft_match_bits:
+- ft_extract_bits: Extracts a subset of bits from a number (from start_bit to end_bit).
+- ft_set_bits: Sets a subset of bits in a number (from start_bit to end_bit) to a given value.
+- ft_match_bits: Checks if a subset of bits matches a specific value.
         // Shifting and rotating
-- ft_rotate_left:
-- ft_rotate_right:
-- ft_arithmetic_shift_left:
+- ft_rotate_left: Performs a left circular shift (rotates bits left).
+- ft_rotate_right: Performs a right circular shift (rotates bits right).
+- ft_arithmetic_shift_left: Performs an arithmetic shift left.
+- ft_arithmetic_shift_right: Performs an arithmetic shift right.
         // Testing and comparison
-- ft_is_power_of_two:
-- ft_are_bits_equal:
+- ft_is_power_of_two: Tests if a number is a power of 2.
+- ft_are_bits_equal: Tests if two numbers have the same bits set.
         // Utilities
-- ft_reverse_bits:
-- ft_swap_bits:
-- ft_count_leading_zeros:
-- ft_count_trailing_zeros:
-- ft_get_parity:
+- ft_reverse_bits: Reverses all bits in a number.
+- ft_swap_bits: Swaps two bits in a number.
+- ft_count_leading_zeros: Counts the leading zeros in a number.
+- ft_count_trailing_zeros: Counts the trailing zeros in a number.
+- ft_get_parity: Gets the parity of a number (1 if odd number of bits sets, 0 if even).
         // Specialized operations
-- ft_pack_two_int:
-- ft_unpack_first_half:
+- ft_pack_two_int: Packs two integers into a single 32-bit value.
+- ft_unpack_first_half: Unpacks the first 16 bits of a packed 32-bit value.
+- ft_unpack_second_half: Unpacks the second 16 bits of a packed 32-bit value.
 
 ### Extra functions
 As my cursus progresses and new challenges arise, I plan to expand this library by adding additional functions to meet specific project needs. These updates will enhance the functionality and versatility of the library.
