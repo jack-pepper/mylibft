@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libutils.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBUTILS_H
+# define LIBUTILS_H
 
 /* STANDARD LIBRARIES */
 # include <stdlib.h>
@@ -22,13 +22,17 @@
 # include <stdarg.h>
 # include <stdio.h>
 
-/* CUSTOM LIBRARIES */
-# include "./libctype/libctype.h"
-# include "./libstring/libstring.h"
-# include "./libstdlib/libstdlib.h"
-# include "./libutils/libutils.h"
-# include "./liblist/liblist.h"
-# include "./libprintf/libprintf.h"
-# include "./libgnl/libgnl.h"
+/* LIBUTILS */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

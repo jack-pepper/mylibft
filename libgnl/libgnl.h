@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libgnl.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBGNL_H
+# define LIBGNL_H
+
+// Defines buffer size
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4096
+# endif
 
 /* STANDARD LIBRARIES */
 # include <stdlib.h>
@@ -22,13 +27,12 @@
 # include <stdarg.h>
 # include <stdio.h>
 
-/* CUSTOM LIBRARIES */
-# include "./libctype/libctype.h"
-# include "./libstring/libstring.h"
-# include "./libstdlib/libstdlib.h"
-# include "./libutils/libutils.h"
-# include "./liblist/liblist.h"
-# include "./libprintf/libprintf.h"
-# include "./libgnl/libgnl.h"
+/* LIBGNL - Get Next Line */
+char	*ft_gnl(int fd);
+char	*read_and_stash(int fd, char **buf, char **stash, char **cursor);
+char	*stash_manager(char *stash, char *buf, size_t b_read);
+char	*seize_line(char **stash, char *cursor);
+char	*seize_eof(char **next_line, char **stash);
+void	clean_stash(char **stash);
 
 #endif

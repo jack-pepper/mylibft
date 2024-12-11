@@ -14,7 +14,7 @@
 ### Name of the file obtained after compilation ###
 ###################################################
 
-NAME = libft.a
+NAME = libprintf.a
 
 ############################
 ### Compilation settings ###
@@ -30,59 +30,54 @@ ARFLAGS=-rcs
 ### Dependencies ###
 ####################
 
-DEPS = libft.h
+DEPS_LIBFT = ../libft.h
+DEPS = libprintf.h
 
 ####################
 ### Source files ###
 ####################
 
-LIBRARY_DIRS = libctype \
-	       libstring \
-	       libstdlib \
-	       libutils \
-	       liblist \
-	       libprintf \
-	       libgnl \
-	       libbin \
+LIBPRINTF = ${SRC_DIR_LIBPRINTF}ft_printf.c \
+	    ${SRC_DIR_LIBPRINTF}ft_spec_conv.c \
+	    ${SRC_DIR_LIBPRINTF}ft_putchar_fd_count.c \
+	    ${SRC_DIR_LIBPRINTF}ft_putstr_fd_count.c \
+	    ${SRC_DIR_LIBPRINTF}ft_putnbr_fd_count.c \
+	    ${SRC_DIR_LIBPRINTF}ft_put_ui_fd_count.c \
+	    ${SRC_DIR_LIBPRINTF}ft_itohex.c \
 
-LIBFT = ./libctype/libctype.a \
-	./libstring/libstring.a \
-	./libstdlib/libstdlib.a \
-	./libutils/libutils.a \
-	./liblist/liblist.a \
-       	./libprintf/libprintf.a \
-	./libgnl/libgnl.a \
-	./libbin/libbin.a \
+SRC = ${LIBPRINTF}
 
 ####################
 ### Object files ###
 ####################
 
+OBJ = $(SRC:.c=.o)
+
 ### Default rules (compile the executable)
 all: $(NAME)
 
-### Create a static library
-$(NAME):
-	cd libctype && make
-	cd libstring && make
-	cd libstdlib && make
-	cd libutils && make
-	cd liblist && make
-	cd libprintf && make
-	cd libgnl && make
-	cd libbin && make
-	$(AR) $(ARFLAGS) $(NAME) $(LIBFT)
+### Compile .c files into .o files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+###############################
+### Create a static library ###
+###############################
+
+$(NAME): $(OBJ)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 #########################
 ### Cleaning-up rules ###
 #########################
 
 clean:
-	$(foreach dir, $(LIBRARY_DIRS), $(MAKE) -C $(dir) clean;)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
+# Rule to recompile everything (execute fclean, then re)
 re: fclean all
 
 #########################

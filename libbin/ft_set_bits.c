@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bin_to_char.c                                   :+:      :+:    :+:   */
+/*   ft_set_bits.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 08:43:01 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/10 09:07:14 by mmalie           ###   ########.fr       */
+/*   Updated: 2024/12/10 09:07:06 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 /*
- * Displays the binary as an ASCII char.
+ * Sets a subset of bits in a number (from start_bit to end_bit) 
+ * to a given value. // ONGOING!
  */
-char	ft_bin_to_char(char binary[8])
+unsigned int	ft_set_bits(unsigned int n, int st, int en, unsigned int val)
 {
-	int	ascii_val;
-	int	i;
-
-	i = 0;
-	while (i < 8)
-	{
-		if (binary[i] == '1')
-		{
-			ascii_val += (1 << (7 - i));
-		}
-		i++;
-	}
-	return ((char)ascii_val);
 }

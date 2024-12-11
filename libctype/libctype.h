@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBCTYPE_H
+# define LIBCTYPE_H
 
 /* STANDARD LIBRARIES */
 # include <stdlib.h>
@@ -22,13 +22,17 @@
 # include <stdarg.h>
 # include <stdio.h>
 
-/* CUSTOM LIBRARIES */
-# include "./libctype/libctype.h"
-# include "./libstring/libstring.h"
-# include "./libstdlib/libstdlib.h"
-# include "./libutils/libutils.h"
-# include "./liblist/liblist.h"
-# include "./libprintf/libprintf.h"
-# include "./libgnl/libgnl.h"
+/* LIBCTYPE */
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_ispunct(int c);
+int		ft_isupper(int c);
+int		ft_islower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_atoi(const char *nptr);
 
 #endif

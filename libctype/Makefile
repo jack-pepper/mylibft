@@ -14,7 +14,7 @@
 ### Name of the file obtained after compilation ###
 ###################################################
 
-NAME = libft.a
+NAME = libctype.a
 
 ############################
 ### Compilation settings ###
@@ -30,63 +30,60 @@ ARFLAGS=-rcs
 ### Dependencies ###
 ####################
 
-DEPS = libft.h
+DEPS_LIBFT = ../libft.h
+DEPS = libctype.h
 
 ####################
 ### Source files ###
 ####################
 
-LIBRARY_DIRS = libctype \
-	       libstring \
-	       libstdlib \
-	       libutils \
-	       liblist \
-	       libprintf \
-	       libgnl \
-	       libbin \
+LIBCTYPE = ft_isalpha.c \
+	   ft_isdigit.c \
+	   ft_isalnum.c \
+	   ft_isascii.c \
+	   ft_isprint.c \
+	   ft_ispunct.c \
+	   ft_isupper.c \
+	   ft_islower.c \
+           ft_toupper.c \
+	   ft_tolower.c \
+	   ft_atoi.c \
 
-LIBFT = ./libctype/libctype.a \
-	./libstring/libstring.a \
-	./libstdlib/libstdlib.a \
-	./libutils/libutils.a \
-	./liblist/liblist.a \
-       	./libprintf/libprintf.a \
-	./libgnl/libgnl.a \
-	./libbin/libbin.a \
+SRC = ${LIBCTYPE}
 
 ####################
 ### Object files ###
 ####################
 
+OBJ = $(SRC:.c=.o)
+
 ### Default rules (compile the executable)
 all: $(NAME)
 
-### Create a static library
-$(NAME):
-	cd libctype && make
-	cd libstring && make
-	cd libstdlib && make
-	cd libutils && make
-	cd liblist && make
-	cd libprintf && make
-	cd libgnl && make
-	cd libbin && make
-	$(AR) $(ARFLAGS) $(NAME) $(LIBFT)
+### Compile .c files into .o files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+###############################
+### Create a static library ###
+###############################
+
+$(NAME): $(OBJ)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 #########################
 ### Cleaning-up rules ###
 #########################
 
 clean:
-	$(foreach dir, $(LIBRARY_DIRS), $(MAKE) -C $(dir) clean;)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-#########################
-### .PHONY Exceptions ###
-#########################
-
+########################
+# .PHONY Exceptions  ###
+########################
 .PHONY: all clean fclean re bonus
