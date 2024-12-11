@@ -17,13 +17,15 @@
 void	ft_show_bin(int num, unsigned int nb_of_bytes)
 {
 	unsigned int	size;
-	
+	int				i;
+
 	size = sizeof(num) * 8;
 	if (nb_of_bytes > size)
 		nb_of_bytes = size ;
-	while (nb_of_bytes > 0)
+	i = size - 1;
+	while (i >= (int)(size - nb_of_bytes))
 	{
-		ft_printf("%d", (num >> nb_of_bytes) & 1);
-		nb_of_bytes--;
+		ft_printf("%d", (num >> i) & 1);
+		i--;
 	}
 }

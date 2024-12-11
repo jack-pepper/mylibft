@@ -128,8 +128,9 @@ To use this project locally:
 
 ### LIBBIN - For bits operations
 - ft_show_bin: Displays the int num in binary notation.
-        // Basic bit operations
 - ft_get_bin: Gets the int num in binary notation and stores it in an array send in parameter.
+- ft_bin_to_char: Displays the binary as an ASCII char.
+        // Basic bit operations
 - ft_set_bit: Sets the specific bit of num at bit_pos to 1.
 - ft_clear_bit: Clears the specific bit of num at bit_pos (sets it to 0).
 - ft_toggle_bit: Toggles the specific bit of num at bit_pos (flips between 1 and 0).

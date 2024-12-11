@@ -11,30 +11,30 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
-
+/*
 int	main(int argc, char **argv)
 {
 	int	argv1_int;
-	//unsigned int	argv2_uint;
+	unsigned int	argv2_uint;
 	int	new_bin;
 	char	bin_get[33];
 
 	new_bin = 0;
 	argv1_int = 0;
-	if (argc != 2)
+	if (argc != 3)
 	{
 		ft_printf("Error: arguments invalid.");
 	}
 	else
 	{
 		argv1_int = ft_atoi(argv[1]);
-		//argv2_uint = ft_atoi(argv[2]);
+		argv2_uint = ft_atoi(argv[2]);
 		ft_printf("Before operation: %d - ", argv1_int);
 		ft_show_bin(argv1_int, 32);
 		ft_get_bin(argv1_int, bin_get);
 		ft_printf("\nGot bin: %s\n", bin_get);
 		//new_bin = ft_set_bit(argv1_int, argv2_uint);
-		//new_bin = ft_clear_bit(argv1_int, argv2_uint);
+		new_bin = ft_clear_bit(argv1_int, argv2_uint);
 		//new_bin = ft_toggle_bit(argv1_int, argv2_uint);
 		//new_bin = ft_is_bit_set(argv1_int, argv2_uint);
 		//new_bin = ft_count_set_bits(argv1_int);
@@ -48,3 +48,4 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+*/

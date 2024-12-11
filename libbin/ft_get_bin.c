@@ -19,7 +19,7 @@ void	ft_get_bin(int num, char binary[33])
 	int	i;
 
 	i = 31;
-	while (i > 0)
+	while (i >= 0)
 	{
 		if (num & (1 << i))
 			binary[31 - i] = '1';
