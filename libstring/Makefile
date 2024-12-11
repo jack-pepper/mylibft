@@ -37,23 +37,23 @@ DEPS = libstring.h
 ### Source files ###
 ####################
 
-LIBSTRING = ${SRC_DIR_LIBSTRING}ft_bzero.c \
-	    ${SRC_DIR_LIBSTRING}ft_memchr.c \
-	    ${SRC_DIR_LIBSTRING}ft_memcmp.c \
-	    ${SRC_DIR_LIBSTRING}ft_memcpy.c \
-	    ${SRC_DIR_LIBSTRING}ft_memmove.c \
-	    ${SRC_DIR_LIBSTRING}ft_memset.c \
-	    ${SRC_DIR_LIBSTRING}ft_strchr.c \
-	    ${SRC_DIR_LIBSTRING}ft_strdel.c \
-	    ${SRC_DIR_LIBSTRING}ft_strdup.c \
-	    ${SRC_DIR_LIBSTRING}ft_strlcat.c \
-	    ${SRC_DIR_LIBSTRING}ft_strlcpy.c \
-	    ${SRC_DIR_LIBSTRING}ft_strlen.c \
-	    ${SRC_DIR_LIBSTRING}ft_strncmp.c \
-	    ${SRC_DIR_LIBSTRING}ft_strnew.c \
-	    ${SRC_DIR_LIBSTRING}ft_strnstr.c \
-	    ${SRC_DIR_LIBSTRING}ft_strrchr.c \
-	    ${SRC_DIR_LIBSTRING}ft_strrev.c \
+LIBSTRING = ft_bzero.c \
+	    ft_memchr.c \
+	    ft_memcmp.c \
+	    ft_memcpy.c \
+	    ft_memmove.c \
+	    ft_memset.c \
+	    ft_strchr.c \
+	    ft_strdel.c \
+	    ft_strdup.c \
+	    ft_strlcat.c \
+	    ft_strlcpy.c \
+	    ft_strlen.c \
+	    ft_strncmp.c \
+	    ft_strnew.c \
+	    ft_strnstr.c \
+	    ft_strrchr.c \
+	    ft_strrev.c \
 
 SRC = ${LIBSTRING}
 
@@ -68,7 +68,7 @@ all: $(NAME)
 
 ### Compile .c files into .o files
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	$(CC) $(CFLAGS) -c $< -o $@
 
 ###############################
 ### Create a static library ###
@@ -76,6 +76,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 #########################
 ### Cleaning-up rules ###

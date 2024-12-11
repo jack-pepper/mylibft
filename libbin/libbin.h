@@ -26,6 +26,8 @@ int				ft_count_set_bits(unsigned int num);
 int				ft_count_clear_bits(unsigned int num);
 int				ft_first_set_bit_pos(unsigned int num);
 int				ft_highest_set_bit_pos(unsigned int num);
+
+/*
 	// Masking bits
 unsigned int	ft_extract_bits(unsigned int num, int start_bit, int end_bit);
 unsigned int	ft_set_bits(unsigned int n, int st, int en, unsigned int val);
@@ -50,5 +52,6 @@ unsigned int	ft_unpack_second_half(unsigned int packed);
 	// Custom bit patterns
 unsigned int	ft_create_bitmask(int num_bits);
 unsigned int	ft_create_range_bitmask(int start_bit, int end_bit);
+*/
 
 #endif

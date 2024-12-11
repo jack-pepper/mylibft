@@ -66,6 +66,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 #########################
 ### Cleaning-up rules ###

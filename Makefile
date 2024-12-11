@@ -64,14 +64,24 @@ all: $(NAME)
 ### Create a static library
 $(NAME):
 	cd libctype && make
+	ar x libctype/libctype.a
 	cd libstring && make
+	ar x libstring/libstring.a
 	cd libstdlib && make
+	ar x libstdlib/libstdlib.a
 	cd libutils && make
+	ar x libutils/libutils.a
 	cd liblist && make
+	ar x liblist/liblist.a
 	cd libprintf && make
+	ar x libprintf/libprintf.a
 	cd libgnl && make
+	ar x libgnl/libgnl.a
 	cd libbin && make
-	$(AR) $(ARFLAGS) $(NAME) $(LIBFT)
+	ar x libbin/libbin.a
+	$(AR) $(ARFLAGS) $(NAME) *.o
+	rm *.o
+	ranlib $(NAME)
 
 #########################
 ### Cleaning-up rules ###
