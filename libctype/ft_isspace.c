@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libstdlib.h                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/10 14:18:47 by mmalie           ###   ########.fr       */
+/*   Created: 2024/11/04 15:33:29 by mmalie            #+#    #+#             */
+/*   Updated: 2024/11/14 09:27:24 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBSTDLIB_H
-# define LIBSTDLIB_H
+#include "../libft.h"
+/* 
+ * Implementation of isspace() from <libctype.h>:
+ * Checks for white-space characters.
+ */
 
-/* STANDARD LIBRARIES */
-# include <stdlib.h>
-# include <stddef.h>
-# include <stdint.h> 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdarg.h>
-# include <stdio.h>
-
-/* LIBSTDLIB */
-void	*ft_calloc(size_t nmemb, size_t size);
-void	ft_memdel(void **ap);
-int		ft_atoi(const char *nptr);
-long	ft_atol(const char *nptr);
-
-#endif
+int	ft_isspace(int c)
+{
+	return (c == 32 || c == '\f' || c == '\n'
+		|| c == '\r' || c == '\t' || c == '\v');
+}

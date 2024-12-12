@@ -15,8 +15,6 @@
  * Implementation of atoi() from <stdlib.h>: Converts a string to an integer, 
  * stopping at the first non-numeric character.
  */
-int			ft_atoi(const char *nptr);
-static		int	ft_isspace(int c);
 
 int	ft_atoi(const char *nptr)
 {
@@ -43,10 +41,4 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (result * sign);
-}
-
-static int	ft_isspace(int c)
-{
-	return (c == 32 || c == '\f' || c == '\n'
-		|| c == '\r' || c == '\t' || c == '\v');
 }

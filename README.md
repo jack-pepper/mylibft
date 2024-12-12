@@ -49,13 +49,13 @@ To use this project locally:
 - ft_isdigit.c - Checks if a character is a digit (0-9).
 - ft_isalnum.c - Checks if a character is either alphabetic or a digit.
 - ft_isascii.c - Checks if a character is a valid ASCII character.
+- ft_isspace.c - Checks for white-space characters.
 - ft_isprint.c - Checks if a character is printable (including space).
 - ft_ispunct.c - Checks if a character is a punctuation character.
 - ft_isupper.c - Checks if a character is uppercase.
 - ft_islower.c - Checks if a character is lowercase.
 - ft_toupper.c - Converts a lowercase letter to uppercase.
 - ft_tolower.c - Converts an uppercase letter to lowercase.
-- ft_atoi.c - Converts a string to an integer, handling whitespace and signs.
 
 #### LIBSTRING (From string.h)
 - ft_strlen.c - Returns the length of a string (excluding the null terminator).
@@ -78,6 +78,8 @@ To use this project locally:
 #### LIBSTDLIB (From stdlib.h)
 - ft_calloc.c - Allocates memory for an array and initializes it to zero.
 - ft_memdel.c - (Non-standard) Frees allocated memory and sets the pointer to null. 
+- ft_atoi.c - Converts a string to an integer, handling whitespace and signs.
+- ft_atol.c - Converts a string to a long, handling whitespace and signs.
 
 ### LIBUTILS (Additional utility functions)
 - ft_itoa.c - Converts an integer to a string representation.

@@ -37,7 +37,9 @@ DEPS = libstdlib.h
 ### Source files ###
 ####################
 
-LIBSTDLIB = ft_calloc.c \
+LIBSTDLIB = ft_atoi.c \
+	    ft_atol.c\
+	    ft_calloc.c \
 	    ft_memdel.c \
 
 SRC = ${LIBSTDLIB}

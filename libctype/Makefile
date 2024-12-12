@@ -43,11 +43,11 @@ LIBCTYPE = ft_isalpha.c \
 	   ft_isascii.c \
 	   ft_isprint.c \
 	   ft_ispunct.c \
+	   ft_isspace.c \
 	   ft_isupper.c \
 	   ft_islower.c \
            ft_toupper.c \
 	   ft_tolower.c \
-	   ft_atoi.c \
 
 SRC = ${LIBCTYPE}
 
