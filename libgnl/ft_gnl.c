@@ -11,36 +11,7 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
-/*
-#include <stdio.h> // For debugging
 
-int	main(void)
-{
-	char	*next_line;
-	int		fd;
-	int		i;
-
-	fd = open("test.txt", O_RDONLY);
-	i = 0;
-	while (1)
-	{
-		i++;
-		printf("=== ITERATION %d === \n", i);
-		next_line = ft_gnl(fd);
-		if (next_line == NULL)
-		{
-			printf("End of file!\n");
-			break ;
-		}
-		else
-		{
-			printf("Final next_line: *%s*\n", next_line);
-			free(next_line);
-		}
-	}
-	return (0);
-}
-*/
 char	*ft_gnl(int fd)
 {
 	char		*buf;
@@ -161,3 +132,34 @@ char	*seize_eof(char **next_line, char **stash)
 	clean_stash(stash);
 	return (*next_line);
 }
+
+/* GNL launcher. Kept for debugging and expansion.*/
+/* #include <stdio.h>
+
+int	main(void)
+{
+	char	*next_line;
+	int		fd;
+	int		i;
+
+	fd = open("test.txt", O_RDONLY);
+	i = 0;
+	while (1)
+	{
+		i++;
+		printf("=== ITERATION %d === \n", i);
+		next_line = ft_gnl(fd);
+		if (next_line == NULL)
+		{
+			printf("End of file!\n");
+			break ;
+		}
+		else
+		{
+			printf("Final next_line: *%s*\n", next_line);
+			free(next_line);
+		}
+	}
+	return (0);
+}
+*/

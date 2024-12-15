@@ -30,5 +30,6 @@
 # include "./liblist/liblist.h"
 # include "./libprintf/libprintf.h"
 # include "./libgnl/libgnl.h"
+# include "./libbin/libbin.h"
 
 #endif

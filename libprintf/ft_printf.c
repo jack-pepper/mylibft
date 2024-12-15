@@ -25,13 +25,41 @@
  *	%X: Prints a number in hexadecimal (base 16) uppercase format.
  *	%%: Prints a percent sign.
 */
+
+int	ft_printf(const char *fmt, ...)
+{
+	va_list	args;
+	size_t	b_writ;
+
+	va_start(args, fmt);
+	if (!fmt)
+		return (-1);
+	b_writ = 0;
+	while (*fmt)
+	{
+		if (*fmt == '%')
+		{
+			fmt = ft_spec_conv(fmt, args, &b_writ);
+		}
+		else
+		{
+			write(1, &(*fmt), 1);
+			b_writ++;
+		}
+		fmt++;
+	}
+	va_end(args);
+	return (b_writ);
+}
+
+/* Comparison printf/ft_print outputs. Kept for debugging and expanding. */
 /*
 int	main(void)
 {
 	int	whatever = 5;
 	printf("Pt: %p \n", &whatever);
 	int	*void_p = NULL;
-	//	int	*whatever_p = &whatever;	
+	//	int	*whatever_p = &whatever;
 	printf("[PRINTF]%d [FT_PRINTF]%d \n", 
 		printf("%c\n", 'x'), ft_printf("%c\n", 'x'));
 	printf("[PRINTF]%d [FT_PRINTF]%d \n", 
@@ -68,28 +96,3 @@ int	main(void)
 		printf("pr %#x\n", 0), ft_printf("ft %#x\n", 0));
 }
 */
-int	ft_printf(const char *fmt, ...)
-{
-	va_list	args;
-	size_t	b_writ;
-
-	va_start(args, fmt);
-	if (!fmt)
-		return (-1);
-	b_writ = 0;
-	while (*fmt)
-	{
-		if (*fmt == '%')
-		{
-			fmt = ft_spec_conv(fmt, args, &b_writ);
-		}
-		else
-		{
-			write(1, &(*fmt), 1);
-			b_writ++;
-		}
-		fmt++;
-	}
-	va_end(args);
-	return (b_writ);
-}

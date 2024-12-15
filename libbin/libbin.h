@@ -16,6 +16,7 @@
 /* LIBBIN - For bit manipulation */
 void			ft_show_bin(int num, unsigned int nb_of_bytes);
 void			ft_get_bin(int num, char binary[33]);
+char			ft_bin_to_char(char binary[9]);
 	// Basic bit operations
 unsigned int	ft_set_bit(unsigned int num, int bit_pos);
 unsigned int	ft_clear_bit(unsigned int num, int bit_pos);
