@@ -164,6 +164,9 @@ To use this project locally:
 - ft_pack_two_int: Packs two integers into a single 32-bit value.
 - ft_unpack_first_half: Unpacks the first 16 bits of a packed 32-bit value.
 - ft_unpack_second_half: Unpacks the second 16 bits of a packed 32-bit value.
+	// Custom bit patterns
+- ft_create_bitmask: Create a bitmask with n least significant bits set to 1.
+- ft_create_range_bitmask: Create a bitmask with bits set to 1 between start_bit and end_bit.
 
 ### Extra functions
 As my cursus progresses and new challenges arise, I plan to expand this library by adding additional functions to meet specific project needs. These updates will enhance the functionality and versatility of the library.
