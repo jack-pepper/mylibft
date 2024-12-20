@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/20 16:47:12 by mmalie           ###   ########.fr       */
+/*   Updated: 2024/12/20 21:45:07 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,15 @@ int				ft_arithmetic_shift_right(int num, int shift_amount);
 int				ft_is_power_of_two(unsigned int num);
 int				ft_are_bits_equal(unsigned int num1, unsigned int num2);
 	// Utilities
-unsigned int	ft_reverse_bits(unsigned int num); // TBD
+unsigned int	ft_reverse_bits(unsigned int num);
 unsigned int	ft_swap_bits(unsigned int num, int bit1_pos, int bit2_pos);
-int				ft_count_leading_zeros(unsigned int num); // TBD
-int				ft_count_trailing_zeros(unsigned int num); // TBD
-int				ft_get_parity(unsigned int num); // TBD
+int				ft_count_leading_zeros(unsigned int num);
+int				ft_count_trailing_zeros(unsigned int num);
+int				ft_get_parity(unsigned int num);
 	// Specialized operations
-unsigned int	ft_pack_two_int(unsigned int int1, unsigned int int2); // TBD
-unsigned int	ft_unpack_first_half(unsigned int packed); // TBD
-unsigned int	ft_unpack_second_half(unsigned int packed); // TBD
+unsigned int	ft_pack_two_int(unsigned int int1, unsigned int int2); // To do
+unsigned int	ft_unpack_first_half(unsigned int packed); // To do
+unsigned int	ft_unpack_second_half(unsigned int packed); // To do
 	// Custom bit patterns
 unsigned int	ft_create_bitmask(int num_bits);
 unsigned int	ft_create_range_bitmask(int start_bit, int end_bit);

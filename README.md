@@ -160,9 +160,9 @@ To use this project locally:
 - ft_count_trailing_zeros: Counts the trailing zeros in a number.
 - ft_get_parity: Gets the parity of a number (1 if odd number of bits sets, 0 if even).
 // Specialized operations
-- ft_pack_two_int: Packs two integers into a single 32-bit value.
-- ft_unpack_first_half: Unpacks the first 16 bits of a packed 32-bit value.
-- ft_unpack_second_half: Unpacks the second 16 bits of a packed 32-bit value.
+- ft_pack_two_int: Packs two integers into a single 32-bit value. // To do
+- ft_unpack_first_half: Unpacks the first 16 bits of a packed 32-bit value. // To do
+- ft_unpack_second_half: Unpacks the second 16 bits of a packed 32-bit value. // To do
 // Custom bit patterns
 - ft_create_bitmask: Create a bitmask with n least significant bits set to 1.
 - ft_create_range_bitmask: Create a bitmask with bits set to 1 between start_bit and end_bit.
