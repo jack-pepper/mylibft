@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/16 23:30:38 by mmalie           ###   ########.fr       */
+/*   Updated: 2024/12/20 16:47:12 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,15 @@ int				ft_highest_set_bit_pos(unsigned int num);
 	// Masking bits
 unsigned int	ft_extract_bits(unsigned int n, int st, int en);
 unsigned int	ft_set_bits(unsigned int n, int st, int en, unsigned int val);
-int				ft_match_bits(unsigned int n, int st, int en, unsigned int val); // TBD
+int				ft_match_bits(unsigned int n, int st, int en, unsigned int val);
 	// Shifting and rotating
-unsigned int	ft_rotate_left(unsigned int num, int shift_amount); // TBD
-unsigned int	ft_rotate_right(unsigned int num, int shift_amount); // TBD
-unsigned int	ft_arithmetic_shift_left(unsigned int num, int shift_amount); // TBD
+unsigned int	ft_rotate_left(unsigned int num, int shift_amount);
+unsigned int	ft_rotate_right(unsigned int num, int shift_amount);
+int				ft_arithmetic_shift_left(int num, int shift_amount);
+int				ft_arithmetic_shift_right(int num, int shift_amount);
 	// Testing and comparison
-int				ft_is_power_of_two(unsigned int num); // TBD
-int				ft_are_bits_equal(unsigned int num1, unsigned int num2); // TBD
+int				ft_is_power_of_two(unsigned int num);
+int				ft_are_bits_equal(unsigned int num1, unsigned int num2);
 	// Utilities
 unsigned int	ft_reverse_bits(unsigned int num); // TBD
 unsigned int	ft_swap_bits(unsigned int num, int bit1_pos, int bit2_pos);
