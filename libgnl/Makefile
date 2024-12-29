@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2024/11/14 09:35:45 by mmalie           ###   ########.fr        #
+#    Updated: 2024/12/29 01:45:41 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,18 @@ OBJ = $(SRC:.c=.o)
 
 ### Default rules (compile the executable)
 all: $(NAME)
+	$(info )
+	$(info   L       III  BBBBB   GGGG  N   N  L       )
+	$(info   L        I   B   B  G      NN  N  L       )
+	$(info   L        I   BBBB   G  GG  N N N  L       )
+	$(info   L        I   B   B  G   G  N  NN  L       )
+	$(info   LLLLL   III  BBBBB   GGG   N   N  LLLLL   )
+	$(info )
+	$(info ============================================)
+	$(info       L I B G N L   C O M P I L E D!        )
+	$(info ============================================)
+	$(info )
+
 
 ### Compile .c files into .o files
 %.o: %.c

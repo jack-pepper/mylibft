@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2024/11/14 09:35:45 by mmalie           ###   ########.fr        #
+#    Updated: 2024/12/29 01:19:36 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,10 +55,19 @@ SRC = ${LIBCTYPE}
 ### Object files ###
 ####################
 
-OBJ = $(SRC:.c=.o)
-
-### Default rules (compile the executable)
 all: $(NAME)
+	$(info )
+	$(info   L       III  BBBBB   CCCC  TTTTT  Y   Y  PPPP  EEEEE   )
+	$(info   L        I   B   B  C        T    Y   Y  P   P E       )
+	$(info   L        I   BBBB   C        T     Y Y   PPPP  EEEE    )
+	$(info   L        I   B   B  C        T      Y    P     E       )
+	$(info   LLLLL   III  BBBBB   CCCC    T      Y    P     EEEEE   )
+	$(info )
+	$(info =========================================================)
+	$(info              L I B C T Y P E   C O M P I L E D!          )
+	$(info =========================================================)
+
+OBJ = $(SRC:.c=.o)
 
 ### Compile .c files into .o files
 %.o: %.c

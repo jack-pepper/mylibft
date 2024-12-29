@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2024/11/14 09:35:45 by mmalie           ###   ########.fr        #
+#    Updated: 2024/12/29 01:51:58 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,37 @@ LIBFT = ./libctype/libctype.a \
 
 ### Default rules (compile the executable)
 all: $(NAME)
+	$(info   L       III  BBBBB   FFFFF  TTTTT  )
+	$(info   L        I   B   B   F        T    )
+	$(info   L        I   BBBB    FFFF     T    )
+	$(info   L        I   B   B   F        T    )
+	$(info   LLLLL   III  BBBBB   F        T    )
+	$(info )
+	$(info =====================================)
+	$(info       L I B F T   C O M P I L E D!   )
+	$(info =====================================)
+	$(info )
+	$(info )
+	$(info        .-""""""""""""""-.            )
+	$(info      .'                   '.         )
+	$(info     /   .-""""""""""""""-.  \        )
+	$(info    ;   /                 \  ;        )
+	$(info    |  ;                   ;  |       )
+	$(info    |  |   .-.       .-.   |  |       )
+	$(info    ;  |  (   )     (   )  |  |       )
+	$(info     \  ;  '-'       '-'  ;  /        )
+	$(info      '.                   .'         )
+	$(info        '-.              .-'          )
+	$(info          '-.          -'             )
+	$(info             '-.- .- .'               )
+	$(info )
+	$(info )
+	$(info Marvin doesn't really care about your compilation.)
+	$(info But it's done anyway, so congratulations!)
+	$(info )
+	$(info =========================================)
+	$(info        LIBFT - The Ultimate C Library    )
+	$(info =========================================)
 
 ### Create a static library
 $(NAME):
