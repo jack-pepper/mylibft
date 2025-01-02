@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pack_two_int.c                                  :+:      :+:    :+:   */
+/*   libsort.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/15 20:48:21 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/02 22:20:29 by mmalie           ###   ########.fr       */
+/*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
+/*   Updated: 2025/01/02 23:03:26 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-/*
- * Packs two integers into a single 32-bit value.
- */
-unsigned int	ft_pack_two_int(unsigned int n1, unsigned int n2)
-{
-	unsigned int	package;
+#ifndef LIBSORT_H
+# define LIBSORT_H
 
-	package = (n1 & 0xFFFF);
-	package <<= 16;
-	package = package | (n2 & 0xFFFF);
-	return (package);
-}
+/* LIBSORT */
+void	*ft_bub_srt(int *arr, size_t size);
+void	*ft_sel_srt(int *arr, size_t size);
+void	*ft_ins_srt(int *arr, size_t size);
+void	*ft_mrg_srt(int *arr, size_t size);
+void	*ft_qck_srt(int *arr, size_t size);
+void	*ft_hep_srt(int *arr, size_t size);
+void	*ft_rdx_srt(int *arr, size_t size);
+#endif

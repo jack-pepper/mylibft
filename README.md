@@ -37,7 +37,7 @@ To use this project locally:
 ## Usage
 
 1. mylibft is designed to be modular, so you can easily add or remove functions and/or libraries depending on your needs.
-2. Functions that were part of the libft project at 42 and libraries created as a school project are prefixed with [42].
+2. Functions that were part of the libft project at 42 are prefixed with [42].
 
 ## Features
 
@@ -71,7 +71,9 @@ To use this project locally:
 - [42] ft_memcmp.c - Compares two blocks of memory byte by byte.
 - [42] ft_strdel.c - Frees a mallocated string and sets the pointer to null.
 - [42] ft_strdup.c - Creates a copy of a string in dynamically allocated memory.
+- ft_strnopbrk.c - Locates the first occurrence in the string s of any of the bytes NOT in the string accept.
 - [42] ft_strnstr.c - Finds the first occurrence of a substring in a string, searching up to a specified length.
+- ft_strpbrk.c - Locates the first occurrence in the string s of any of the bytes in the string accept.
 - ft_strrev.c - Reverses a string in place.
 
 #### LIBSTDLIB (From stdlib.h)
@@ -128,42 +130,43 @@ To use this project locally:
 - clean_stash: Frees the stash and sets the pointer to null.
 
 ### LIBBIN - For bits operations
+# Display
 - ft_show_bin: Displays the int num in binary notation.
 - ft_get_bin: Gets the int num in binary notation and stores it in an array send in parameter.
 - ft_bin_to_char: Displays the binary as an ASCII char.
-// Basic bit operations
+# Basic bit operations
 - ft_set_bit: Sets the specific bit of num at bit_pos to 1.
 - ft_clear_bit: Clears the specific bit of num at bit_pos (sets it to 0).
 - ft_toggle_bit: Toggles the specific bit of num at bit_pos (flips between 1 and 0).
 - ft_is_bit_set: Checks if the specific bit of num at bit_pos is set (1) or not (0).
-// Counting bits
+# Counting bits
 - ft_count_set_bits: Counts the number of bits set to 1.
 - ft_count_clear_bits: Counts the number of bits set to 0.
 - ft_first_set_bit_pos: Gets the position of the first bit set to 1.
 - ft_highest_set_bit_pos: Gets the position of the most significant bit.
-// Masking bits
+# Masking bits
 - ft_extract_bits: Extracts a subset of bits from a number (from start_bit to end_bit).
 - ft_set_bits: Sets a subset of bits in a number (from start_bit to end_bit) to a given value.
 - ft_match_bits: Checks if a subset of bits matches a specific value.
-// Shifting and rotating
+# Shifting and rotating
 - ft_rotate_left: Performs a left circular shift (rotates bits left).
 - ft_rotate_right: Performs a right circular shift (rotates bits right).
 - ft_arithmetic_shift_left: Performs an arithmetic shift left.
 - ft_arithmetic_shift_right: Performs an arithmetic shift right.
-// Testing and comparison
+# Testing and comparison
 - ft_is_power_of_two: Tests if a number is a power of 2.
 - ft_are_bits_equal: Tests if two numbers have the same bits set.
-// Utilities
+# Utilities
 - ft_reverse_bits: Reverses all bits in a number.
 - ft_swap_bits: Swaps two bits in a number.
 - ft_count_leading_zeros: Counts the leading zeros in a number.
 - ft_count_trailing_zeros: Counts the trailing zeros in a number.
 - ft_get_parity: Gets the parity of a number (1 if odd number of bits sets, 0 if even).
-// Specialized operations
+# Specialized operations
 - ft_pack_two_int: Packs two integers into a single 32-bit value. // To do
 - ft_unpack_first_half: Unpacks the first 16 bits of a packed 32-bit value. // To do
 - ft_unpack_second_half: Unpacks the second 16 bits of a packed 32-bit value. // To do
-// Custom bit patterns
+# Custom bit patterns
 - ft_create_bitmask: Create a bitmask with n least significant bits set to 1.
 - ft_create_range_bitmask: Create a bitmask with bits set to 1 between start_bit and end_bit.
 

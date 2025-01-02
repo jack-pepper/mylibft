@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
-/*   Updated: 2024/12/10 14:18:47 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/02 12:32:22 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 void	ft_strdel(char **as);
 char	*ft_strdup(const char *s);
+char	*ft_strnopbrk(const char *s, const char *accept);
+char	*ft_strpbrk(const char *s, const char *accept);
 char	*ft_strrev(char *str);
 
 #endif

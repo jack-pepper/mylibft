@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pack_two_int.c                                  :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/15 20:48:21 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/02 22:20:29 by mmalie           ###   ########.fr       */
+/*   Created: 2025/01/02 10:12:26 by mmalie            #+#    #+#             */
+/*   Updated: 2025/01/02 11:27:51 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-/*
- * Packs two integers into a single 32-bit value.
+/* 
+ * Implementation of strpbrk() from <string.h>: Locates the first occurence
+ * in the string s of any of the bytes in the string accept.
  */
-unsigned int	ft_pack_two_int(unsigned int n1, unsigned int n2)
+char	*ft_strpbrk(const char *s, const char *accept)
 {
-	unsigned int	package;
+	int	i;
 
-	package = (n1 & 0xFFFF);
-	package <<= 16;
-	package = package | (n2 & 0xFFFF);
-	return (package);
+	i = 0;
+	if (s != NULL && accept != NULL)
+	{
+		while (*s)
+		{
+			i = 0;
+			while (accept[i])
+			{
+				if (*s == accept[i])
+					return ((char *)s);
+				i++;
+			}
+			s++;
+		}
+	}
+	return (NULL);
 }

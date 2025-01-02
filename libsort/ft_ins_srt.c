@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pack_two_int.c                                  :+:      :+:    :+:   */
+/*   ft_ins_srt.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/15 20:48:21 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/02 22:20:29 by mmalie           ###   ########.fr       */
+/*   Created: 2025/01/02 22:47:31 by mmalie            #+#    #+#             */
+/*   Updated: 2025/01/02 22:49:49 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 /*
- * Packs two integers into a single 32-bit value.
+ * INSERTION SORT works by building a sorted section of the array one element
+ * at a time by inserting elements into their correct positions.
  */
-unsigned int	ft_pack_two_int(unsigned int n1, unsigned int n2)
-{
-	unsigned int	package;
 
-	package = (n1 & 0xFFFF);
-	package <<= 16;
-	package = package | (n2 & 0xFFFF);
-	return (package);
+/*
+void	ft_ins_srt(int *arr, size_t size)
+{
 }
+*/

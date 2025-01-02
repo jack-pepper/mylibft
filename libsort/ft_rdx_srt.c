@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pack_two_int.c                                  :+:      :+:    :+:   */
+/*   ft_rdx_srt.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/15 20:48:21 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/02 22:20:29 by mmalie           ###   ########.fr       */
+/*   Created: 2025/01/02 22:56:58 by mmalie            #+#    #+#             */
+/*   Updated: 2025/01/02 22:58:41 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 /*
- * Packs two integers into a single 32-bit value.
+ * RADIX SORT is a non-comparative integer sorting algorithm that sorts
+ * numbers by processing individual digits.
  */
-unsigned int	ft_pack_two_int(unsigned int n1, unsigned int n2)
+/*
+void ft_rdx_srt(int *arr, size_t size)
 {
-	unsigned int	package;
-
-	package = (n1 & 0xFFFF);
-	package <<= 16;
-	package = package | (n2 & 0xFFFF);
-	return (package);
 }
+*/
