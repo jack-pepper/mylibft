@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2024/12/29 01:51:58 by mmalie           ###   ########.fr        #
+#    Updated: 2025/01/03 09:21:14 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ LIBRARY_DIRS = libctype \
 	       libprintf \
 	       libgnl \
 	       libbin \
+	       libsort \
 
 LIBFT = ./libctype/libctype.a \
 	./libstring/libstring.a \
@@ -53,6 +54,7 @@ LIBFT = ./libctype/libctype.a \
        	./libprintf/libprintf.a \
 	./libgnl/libgnl.a \
 	./libbin/libbin.a \
+	./libsort/libsort.a \
 
 ####################
 ### Object files ###
@@ -110,6 +112,8 @@ $(NAME):
 	ar x libgnl/libgnl.a
 	cd libbin && make
 	ar x libbin/libbin.a
+	cd libsort && make
+	ar x libsort/libsort.a
 	$(AR) $(ARFLAGS) $(NAME) *.o
 	rm *.o
 	ranlib $(NAME)

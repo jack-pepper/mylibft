@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 22:20:47 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/02 23:04:53 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/03 10:30:10 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 /* 
  * BUBBLE SORT works by repeatedly swapping adjacent elements if they are in
  * the wrong order.
+ *
+ * STEPS:
+ * - Iterate through the array, processing each element one by one.
+ * - For each element, compare it with the one following it.
+ * - If the current element is greater than the next, swap them so that the
+ *   larger value is positioned at the end.
+ * - Repeat for as many times as there are elements in the array.
  */
 
-/*
-void	ft_bub_srt(int *arr, size_t size);
-
+/* 
 void	bub_srt(void *arr, size_t sz, size_t elem_sz, 
                      int (*cmp)(const void *, const void *));
 void	bubble_sort(void *arr, size_t size, size_t elem_size, 
@@ -26,3 +31,31 @@ void	bubble_sort(void *arr, size_t size, size_t elem_size,
 int	int_cmp(const void *a, const void *b);
 int	str_cmp(const void *a, const void *b);
 */
+
+void	ft_bub_srt(int *arr, size_t size)
+{
+	size_t	i;
+	int		swapped;
+
+	if (size <= 1)
+		return ;
+	swapped = 1;
+	while (swapped)
+	{
+		swapped = 0;
+		i = 0;
+		while (i < (size - 1))
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				arr[i] = arr[i] ^ arr[i + 1];
+				arr[i + 1] = arr[i] ^ arr[i + 1];
+				arr[i] = arr[i] ^ arr[i + 1];
+				swapped = 1;
+			}
+			i++;
+		}
+		size--;
+	}
+	return ;
+}
