@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 22:20:47 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/03 10:30:10 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/04 00:08:24 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,16 @@
  * - If the current element is greater than the next, swap them so that the
  *   larger value is positioned at the end.
  * - Repeat for as many times as there are elements in the array.
+ *
+ * OPTIONS: 'a' for 'a'scending order, 'd' for 'd'escending order.
  */
-
 /* 
-void	bub_srt(void *arr, size_t sz, size_t elem_sz, 
-                     int (*cmp)(const void *, const void *));
 void	bubble_sort(void *arr, size_t size, size_t elem_size, 
                      int (*cmp)(const void *, const void *));
 int	int_cmp(const void *a, const void *b);
 int	str_cmp(const void *a, const void *b);
 */
-
-void	ft_bub_srt(int *arr, size_t size)
+void	ft_bub_srt(int *arr, size_t size, char opt)
 {
 	size_t	i;
 	int		swapped;
@@ -46,11 +44,10 @@ void	ft_bub_srt(int *arr, size_t size)
 		i = 0;
 		while (i < (size - 1))
 		{
-			if (arr[i] > arr[i + 1])
+			if ((opt == 'a' && arr[i] > arr[i + 1])
+				|| (opt == 'd' && arr[i] < arr[i + 1]))
 			{
-				arr[i] = arr[i] ^ arr[i + 1];
-				arr[i + 1] = arr[i] ^ arr[i + 1];
-				arr[i] = arr[i] ^ arr[i + 1];
+				ft_swap_ints(&arr[i], &arr[i + 1]);
 				swapped = 1;
 			}
 			i++;

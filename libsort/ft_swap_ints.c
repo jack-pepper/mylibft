@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rdx_srt.c                                       :+:      :+:    :+:   */
+/*   ft_swap_ints.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 22:56:58 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/04 00:33:21 by mmalie           ###   ########.fr       */
+/*   Created: 2025/01/03 22:54:20 by mmalie            #+#    #+#             */
+/*   Updated: 2025/01/03 23:23:35 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 /*
- * RADIX SORT is a non-comparative integer sorting algorithm that sorts
- * numbers by processing individual digits.
- *
- * STEPS:
- * - Find the largest element. Iterate as many times as digits in it.
- * - Sort
- * -
+ * Swaps two ints using a temporary variable.
  */
-/*
-void ft_rdx_srt(int *arr, size_t size)
+void	ft_swap_ints(int *a, int *b)
 {
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+	return ;
 }
-*/

@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2025/01/02 22:54:19 by mmalie           ###   ########.fr        #
+#    Updated: 2025/01/04 00:09:15 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,21 +31,23 @@ ARFLAGS=-rcs
 ####################
 
 DEPS_LIBFT = ../libft.h
-DEPS = libsort.h
+DEPS = ./libsort.h
 
 ####################
 ### Source files ###
 ####################
 
-LIBSORT = ft_bub_srt.c \
-	    ft_sel_srt.c\
-	    ft_ins_srt.c \
-	    ft_mrg_srt.c \
-	    ft_qck_srt.c \
-	    ft_hep_srt.c \
-	    ft_rdx_srt.c \
+LIBSORT_UTILS = ft_swap_ints.c \
 
-SRC = ${LIBSORT}
+LIBSORT = ft_bub_srt.c \
+	    ft_sel_srt.c \
+	    #ft_ins_srt.c \
+	    #ft_mrg_srt.c \
+	    #ft_qck_srt.c \
+	    #ft_hep_srt.c \
+	    #ft_rdx_srt.c \
+
+SRC = ${LIBSORT_UTILS} ${LIBSORT}
 
 ####################
 ### Object files ###
