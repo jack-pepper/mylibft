@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:01:49 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/03 23:27:15 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/04 10:52:30 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 		}
 		i = 0;
 		ft_printf("\nAfter sort 'a': ");
-		ft_bub_srt(arr, nb_elem, 'a');	
+		ft_ins_srt(arr, nb_elem, 'a');	
 		while (i < nb_elem)
 		{
 			ft_printf("%d ", arr[i]);
@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 		}
 		i = 0;
 		ft_printf("\nAfter sort 'd': ");
-		ft_bub_srt(arr, nb_elem, 'd');
+		ft_ins_srt(arr, nb_elem, 'd');
 		while (i < nb_elem)
 		{
 			ft_printf("%d ", arr[i]);
