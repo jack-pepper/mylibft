@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:01:49 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/04 10:52:30 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/05 01:31:28 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,16 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		i = 0;
+		ft_rev_arr_int(arr, nb_elem);
+		ft_printf("After reverse: ");
+		while (i < nb_elem)
+		{
+			ft_printf("%d ", arr[i]);
+			i++;
+		}
+		i = 0;
 		ft_printf("\nAfter sort 'a': ");
-		ft_ins_srt(arr, nb_elem, 'a');	
+		ft_mrg_srt(arr, nb_elem, 'a');	
 		while (i < nb_elem)
 		{
 			ft_printf("%d ", arr[i]);
@@ -43,7 +51,7 @@ int	main(int argc, char **argv)
 		}
 		i = 0;
 		ft_printf("\nAfter sort 'd': ");
-		ft_ins_srt(arr, nb_elem, 'd');
+		ft_mrg_srt(arr, nb_elem, 'd');
 		while (i < nb_elem)
 		{
 			ft_printf("%d ", arr[i]);

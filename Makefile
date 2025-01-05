@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2025/01/04 00:00:17 by mmalie           ###   ########.fr        #
+#    Updated: 2025/01/05 11:11:30 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,7 +124,6 @@ $(NAME):
 
 clean:
 	$(foreach dir, $(LIBRARY_DIRS), $(MAKE) -C $(dir) clean;)
-	rm *.o
 
 fclean: clean
 	rm -f $(NAME)
