@@ -6,13 +6,14 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:01:49 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/05 01:31:28 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/06 22:10:06 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "libsort.h"
 
+/*
 int	main(int argc, char **argv)
 {	
 	if (argc > 2)
@@ -59,3 +60,4 @@ int	main(int argc, char **argv)
 		}	
 	}
 }
+*/

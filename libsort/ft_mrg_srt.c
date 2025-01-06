@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 22:49:56 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/05 11:06:01 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/06 22:14:10 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,22 @@
  *     taking an option 'a'scending or 'd'escending order. But it would require
  *     a struct (the Norm allows up to 4 parameters maximum).
  *
- * NB 2: Those functions are static for lisibility reasons.
  */
 
-static void	ft_mrg_arrs(int *arr, int *left_sub, int *right_sub, size_t size);
-static void	ft_mrg_arrs_rev(int *arr, int *left_sub, int *right_sub, size_t size);
-void    ft_cpy_arr_int(int *dst_arr, int *src_arr, size_t size);
+void	ft_mrg_arrs(int *arr, int *left_sub, int *right_sub, size_t size);
+void	ft_mrg_arrs_rev(int *arr, int *left_sub, int *right_sub, size_t size);
+void	ft_cpy_arr_int(int *dst_arr, int *src_arr, size_t size);
 
 void	ft_mrg_srt(int *arr, size_t size, char opt)
 {
 	size_t	middle;
-	int	*left_sub;
-	int	*right_sub;
+	int		*left_sub;
+	int		*right_sub;
 
 	if (size < 2)
 		return ;
 	middle = size / 2;
-	left_sub = ft_calloc(middle, sizeof(int));	
+	left_sub = ft_calloc(middle, sizeof(int));
 	right_sub = ft_calloc(size - middle, sizeof(int));
 	if (!left_sub || !right_sub)
 		return ;
@@ -51,14 +50,14 @@ void	ft_mrg_srt(int *arr, size_t size, char opt)
 	ft_mrg_srt(right_sub, size - middle, opt);
 	if (opt == 'd')
 		ft_mrg_arrs_rev(arr, left_sub, right_sub, size);
-	else	
+	else
 		ft_mrg_arrs(arr, left_sub, right_sub, size);
 	free(left_sub);
 	free(right_sub);
 	return ;
 }
 
-static void	ft_mrg_arrs(int *arr, int *left_sub, int *right_sub, size_t size)
+void	ft_mrg_arrs(int *arr, int *left_sub, int *right_sub, size_t size)
 {
 	size_t	i;
 	size_t	j;
@@ -82,9 +81,10 @@ static void	ft_mrg_arrs(int *arr, int *left_sub, int *right_sub, size_t size)
 		arr[k++] = left_sub[i++];
 	while (j < right_size)
 		arr[k++] = right_sub[j++];
-	return;
+	return ;
 }
-static void	ft_mrg_arrs_rev(int *arr, int *left_sub, int *right_sub, size_t size)
+
+void	ft_mrg_arrs_rev(int *arr, int *left_sub, int *right_sub, size_t size)
 {
 	size_t	i;
 	size_t	j;
@@ -108,5 +108,5 @@ static void	ft_mrg_arrs_rev(int *arr, int *left_sub, int *right_sub, size_t size
 		arr[k++] = left_sub[i++];
 	while (j < right_size)
 		arr[k++] = right_sub[j++];
-	return;
+	return ;
 }
