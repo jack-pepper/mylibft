@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/03 09:16:52 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/01/06 23:26:47 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@
 # include "./libgnl/libgnl.h"
 # include "./libbin/libbin.h"
 # include "./libsort/libsort.h"
+# include "./libxkit/libxkit.h"
 
 #endif
