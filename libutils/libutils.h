@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:25:28 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/06 21:53:38 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/02/05 11:30:02 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_open_file(char *fpath, char *access_mode, char *error_msg);
 int		ft_read_line(int fd, char **line, char *error_msg);
+int		ft_abs_int(int nb);
+void	ft_init_ints(int init_value, int count, ...);
+
 #endif

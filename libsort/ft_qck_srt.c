@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 22:51:56 by mmalie            #+#    #+#             */
-/*   Updated: 2025/01/23 13:21:38 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/02/05 11:43:36 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	ft_get_pivot(int *arr, size_t min, size_t max, char pivot_rule)
 }
 */
 
- /* Get the square root of a number (using Newton method).
+/* Get the square root of a number (using Newton method).
  * Return -1 if the number is negative.
  */
 /*static double	ft_sqrt_newton(double number)
