@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2025/01/05 10:55:56 by mmalie           ###   ########.fr        #
+#    Updated: 2025/02/15 11:09:19 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,32 +56,42 @@ SRC = ${LIBSORT_UTILS} ${LIBSORT}
 ### Object files ###
 ####################
 
-OBJ = $(SRC:.c=.o)
+OBJ_DIR = ./obj
+
+OBJ = $(patsubst %.c,$(OBJ_DIR)/%.o, $(SRC))
 
 ### Default rules (compile the executable)
 all: $(NAME)
-	$(info )
-	$(info   L       III  BBBBB   SSSSS  OOOOO  RRRR   TTTTT   )
-	$(info   L        I   B   B   S      O   O  R   R    T     )
-	$(info   L        I   BBBB    SSSSS  O   O  RRRR     T     )
-	$(info   L        I   B   B       S  O   O  R  R     T     )
-	$(info   LLLLL   III  BBBBB   SSSSS  OOOOO  R   R    T     )
-	$(info )
-	$(info ====================================================)
-	$(info       L I B S O R T   C O M P I L E D!              )
-	$(info ====================================================)
-	$(info )
-### Compile .c files into .o files
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	@echo
+	@echo "====================================================================================" 
+	@echo "                         🔽 🔼 📊 Compiling LIBSORT...                              "
+	@echo "===================================================================================="	
+	@echo "                   L       III  BBBBB  SSSSS  OOOOO  RRRR   TTTTT                   "
+	@echo "                   L        I   B   B  S      O   O  R   R    T                     "
+	@echo "                   L        I   BBBB   SSSSS  O   O  RRRR     T                     "
+	@echo "                   L        I   B   B      S  O   O  R  R     T                     "
+	@echo "                   LLLLL   III  BBBBB  SSSSS  OOOOO  R   R    T                     "
+	@echo "===================================================================================="
+	@echo "                        L I B S O R T   C O M P I L E D! 🪆 ✅                      "
+	@echo "                            Sorting complete! 🎯                                    "	
+	@echo "===================================================================================="
+	@echo	
 
 ###############################
 ### Create a static library ###
 ###############################
 
-$(NAME): $(OBJ)
+$(NAME): | $(OBJ_DIR) $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+### Compile .c files into .o files and store in ./obj
+$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+### Create ./obj folder if missing
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
 #########################
 ### Cleaning-up rules ###
@@ -89,6 +99,7 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -f $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,11 +6,12 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2025/01/13 09:36:42 by mmalie           ###   ########.fr        #
+#    Updated: 2025/02/09 18:45:20 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 MAKEFLAGS += -s
+MAKEFLAGS += --no-print-directory
 
 ###################################################
 ### Name of the file obtained after compilation ###
@@ -66,36 +67,42 @@ LIBFT = ./libctype/libctype.a \
 
 ### Default rules (compile the executable)
 all: $(NAME)
-	@echo "===================================================="
-	@echo "===================================================="
+all:
+	@echo "===================================================================================="
+	@echo "                🚀 🔥 📜 💡 🎮 🖥️ 👾 🔢 💾 🛠️ 🔗 🖨️ 💾 📊 🔍 ⚙️  🎯                  "
+	@echo "===================================================================================="
 	@echo ""
-	@echo "   *      L       III  BBBBB   FFFFF  TTTTT     *   " 
-	@echo "          L        I   B   B   F        T           "
-	@echo "      *   L        I   BBBB    FFFF     T    *      "
-	@echo "          L        I   B   B   F        T           "
-	@echo "   *      LLLLL   III  BBBBB   F        T       *   "
-	@echo ""	
-	@echo "===================================================="
-	@echo "========== LIBFT - The Ultimate C Library =========="
-	@echo "===================================================="
-	@echo ""
-	@echo "    .-\"\"\"\"\"\"\"\"\"\"\"\"\"-.                     "
-	@echo "  .'                  '.                               "
-	@echo " /   .-\"\"\"\"\"\"\"\"\"\"\"\"-.   \\                 "
-	@echo ";   /                 \\  ;          :::      :::::::: "
-	@echo "|  ;                   ;  |        :+:      :+:    :+: "	
-	@echo "|  |   .-.       .-.   |  |      +:+ +:+         +:+   "
-	@echo ";  |  (   )     (   )  |  ;    +#+  +:+       +#+      "
-	@echo "\\  ;  '-'       '-'  ;  /   +#+#+#+#+#+    +#+        "
-	@echo "'.                   .'            #+#    #+#          "
-	@echo "   '-.              .-'           ###   ########.fr    "
-	@echo "     '-.          -'                                   "
-	@echo "        '-.- .- .'                                     "
-	@echo ""
-	@echo " ~ Marvin doesn't really care about your compilation. ~ "
-	@echo "     ~ But it's done anyway, so congratulations! ~      "
-	@echo ""
-                             
+	@echo "         ✨            L       III  BBBBB   FFFFF  TTTTT               ✨           " 
+	@echo "                       L        I   B   B   F        T                              "
+	@echo "               ✨      L        I   BBBB    FFFF     T         ✨                   "
+	@echo "                       L        I   B   B   F        T                              "
+	@echo "        ✨             LLLLL   III  BBBBB   F        T                   ✨         "
+	@echo "                                                                                    "
+	@echo "===================================================================================="
+	@echo "==================== 🏆 LIBFT - The Ultimate C Library 🏆 =========================="
+	@echo "===================================================================================="
+	@echo "                                                                                    "
+	@echo "                                 :::      ::::::::                                  " 
+	@echo "                               :+:      :+:    :+:                                  " 
+	@echo "                              +:+ +:+         +:+                                   "  
+	@echo "                            +#+  +:+       +#+                                      " 
+	@echo "                          +#+#+#+#+#+    +#+                                        "   
+	@echo "                               #+#    #+#                                           "  
+	@echo "                               ###   ########.fr                                    "  
+	@echo "                                                                                    "
+	@echo "           ~ 🤖 Marvin doesn't really care about your compilation... ~              "
+	@echo "                ~ But it's done anyway, so congratulations! 🎉 🥳 ~                 "
+	@echo "                                                                                    "
+	@echo "===================================================================================="
+	@echo "                  👨 💻 Developed by:    Jack Pepper (mmalie)                       "
+	@echo "                     📧 Contact:         xxx@xxx                                    "
+	@echo "                                                                                    " 
+	@echo "      💡    \"\"Git commit messages are where developers cry in silence.\"\"  🔥    "
+	@echo "===================================================================================="
+	@echo "                                                                                    "
+	@echo "                     🎉 🚀 LIBFT Compilation Complete! 🚀 🎉"
+	@echo "===================================================================================="
+ 
 
 
 ### Create a static library
@@ -131,7 +138,8 @@ $(NAME):
 clean:
 	$(foreach dir, $(LIBRARY_DIRS), $(MAKE) -C $(dir) clean;)
 
-fclean: clean
+fclean: clean	
+	$(foreach dir, $(LIBRARY_DIRS), $(MAKE) -C $(dir) fclean;)
 	rm -f $(NAME)
 
 re: fclean all

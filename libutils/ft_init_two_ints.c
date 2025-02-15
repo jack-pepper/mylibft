@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_ints.c                                     :+:      :+:    :+:   */
+/*   ft_init_two_ints.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 11:25:38 by mmalie            #+#    #+#             */
-/*   Updated: 2025/02/05 11:45:32 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/02/12 10:17:10 by mmalie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 /*
- * This variadic function initializes several int variables to the same value
- * (probably 0) in order to save some lines.
+ * As ft_init_ints might not pass the 42 Norm because of the use of variadic
+ * functions, this version does the same for two ints.
  */
-void	ft_init_ints(int init_value, int count, ...)
+void	ft_init_two_ints(int init_value, int *int_1, int *int_2)
 {
-	va_list	args;
-	int		*cur_int_arg;
-	int		i;
-
-	va_start(args, count);
-	i = 0;
-	while (i < count)
-	{
-		cur_int_arg = va_arg(args, int *);
-		*cur_int_arg = init_value;
-		i++;
-	}
-	va_end(args);
+	*int_1 = init_value;
+	*int_2 = init_value;
 	return ;
 }

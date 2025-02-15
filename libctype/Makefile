@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2024/12/29 01:19:36 by mmalie           ###   ########.fr        #
+#    Updated: 2025/02/15 11:10:40 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,17 +55,24 @@ SRC = ${LIBCTYPE}
 ### Object files ###
 ####################
 
+OBJ_DIR = ./obj
+
+OBJ = $(patsubst %.c,$(OBJ_DIR)/%.o, $(SRC))
+
 all: $(NAME)
-	$(info )
-	$(info   L       III  BBBBB   CCCC  TTTTT  Y   Y  PPPP  EEEEE   )
-	$(info   L        I   B   B  C        T    Y   Y  P   P E       )
-	$(info   L        I   BBBB   C        T     Y Y   PPPP  EEEE    )
-	$(info   L        I   B   B  C        T      Y    P     E       )
-	$(info   LLLLL   III  BBBBB   CCCC    T      Y    P     EEEEE   )
-	$(info )
-	$(info =========================================================)
-	$(info              L I B C T Y P E   C O M P I L E D!          )
-	$(info =========================================================)
+	@echo
+	@echo "====================================================================================" 
+	@echo "                         🔠 🔢 🔣 Compiling LIBCTYPE...                             "
+	@echo "===================================================================================="
+	@echo "               L       III  BBBBB   CCCC  TTTTT  Y   Y  PPPP   EEEEE                "
+	@echo "               L        I   B   B  C        T     Y Y   P   P  E                    "
+	@echo "               L        I   BBBB   C        T      Y    PPPP   EEEE                 "
+	@echo "               L        I   B   B  C        T      Y    P      E                    "
+	@echo "               LLLLL   III  BBBBB   CCCC    T      Y    P      EEEEE                "
+	@echo "===================================================================================="
+	@echo "                     L I B C T Y P E   C O M P I L E D! 🆗  ✅                      "
+	@echo "                            Ready to check types! 🔍                                "
+	@echo "===================================================================================="
 
 OBJ = $(SRC:.c=.o)
 
@@ -77,9 +84,17 @@ OBJ = $(SRC:.c=.o)
 ### Create a static library ###
 ###############################
 
-$(NAME): $(OBJ)
+$(NAME): | $(OBJ_DIR) $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+### Compile .c files into .o files and store in ./obj
+$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+### Create ./obj folder if missing
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
 #########################
 ### Cleaning-up rules ###
@@ -87,6 +102,7 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -f $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)

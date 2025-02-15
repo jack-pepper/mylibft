@@ -6,7 +6,7 @@
 #    By: mmalie <mmalie@student.42nice.fr           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 09:35:38 by mmalie            #+#    #+#              #
-#    Updated: 2025/01/02 12:35:05 by mmalie           ###   ########.fr        #
+#    Updated: 2025/02/15 11:07:25 by mmalie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,34 +63,41 @@ SRC = ${LIBSTRING}
 ### Object files ###
 ####################
 
-OBJ = $(SRC:.c=.o)
+OBJ_DIR = ./obj
+
+OBJ = $(patsubst %.c,$(OBJ_DIR)/%.o, $(SRC))
 
 ### Default rules (compile the executable)
 all: $(NAME)
-	$(info )
-	$(info   L       III  BBBBB   SSSSS  TTTTT  RRRR   III  N   N  GGGG   )
-	$(info   L        I   B   B   S        T    R   R   I   NN  N  G       )
-	$(info   L        I   BBBB    SSSSS    T    RRRR    I   N N N  G  GG   )
-	$(info   L        I   B   B      S     T    R  R    I   N  NN  G   G   )
-	$(info   LLLLL   III  BBBBB   SSSSS    T    R   R  III  N   N  GGGG    )
-	$(info )
-	$(info ================================================================)
-	$(info       L I B S T R I N G   C O M P I L E D!                      )
-	$(info ================================================================)
-	$(info )
-
-
-### Compile .c files into .o files
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@echo
+	@echo "===================================================================================="
+	@echo "                       🔤 📜 ⚙️  Compiling LIBSTRING..."
+	@echo "===================================================================================="
+	@echo "             L      III  BBBBB  SSSSS  TTTTT  RRRR   III  N   N  GGGGG              "
+	@echo "             L       I   B   B  S        T    R   R   I   NN  N  G                  "
+	@echo "             L       I   BBBB   SSSSS    T    RRRR    I   N N N  G  GG              "
+	@echo "             L       I   B   B      S    T    R  R    I   N  NN  G   G              "
+	@echo "             LLLLL  III  BBBBB  SSSSS    T    R   R  III  N   N   GGGG              "
+	@echo "===================================================================================="
+	@echo "                      L I B S T R I N G   C O M P I L E D! 🧵 ✅                  "
+	@echo "                         String functions ready!  ✍️                                "
+	@echo "===================================================================================="
 
 ###############################
 ### Create a static library ###
 ###############################
 
-$(NAME): $(OBJ)
+$(NAME): | $(OBJ_DIR) $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+### Compile .c files into .o files and store in ./obj
+$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+### Create ./obj folder if missing
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
 #########################
 ### Cleaning-up rules ###
@@ -98,6 +105,7 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -f $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)
