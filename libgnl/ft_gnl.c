@@ -6,7 +6,7 @@
 /*   By: mmalie <mmalie@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:33:12 by mmalie            #+#    #+#             */
-/*   Updated: 2025/02/09 10:00:47 by mmalie           ###   ########.fr       */
+/*   Updated: 2025/08/20 15:30:38 by yel-bouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,6 @@ char	*seize_eof(char **next_line, char **stash)
 		return (NULL);
 	ft_strlcpy(*next_line, *stash, chunk_len + 1);
 	clean_stash(stash);
-	free(stash);
 	return (*next_line);
 }
 
